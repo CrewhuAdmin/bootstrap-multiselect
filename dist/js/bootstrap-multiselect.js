@@ -539,7 +539,7 @@
             });
         
             $('li a', this.$ul).on('touchstart click', $.proxy(function(event) {
-                event.stopPropagation();
+                if (!this.options.doNotStopPropagationOnClick) event.stopPropagation();
 
                 var $target = $(event.target);
                 
